@@ -1,0 +1,235 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif;
+}
+
+.chat{
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	flex-direction: column;
+	/*background-color: black;*/
+	background-image: url('img/bg2.jpg');
+	background-size: cover;
+	background-position: center;
+}
+
+@media only screen and (max-width: 1200px) {
+  .chat {
+    height: 105vh;
+    width: 105%;
+  }
+}
+
+
+input{
+	width: 320px;
+	height: 60px;
+	font-size: 20px;
+	outline: none;
+	cursor: text;
+	padding: 4%;
+	border-left: none;
+	border-right: none;
+	border: 2px solid white;
+	color: white;
+	background-color: black;
+	border-radius: 50px;
+	background: rgba(0,0,0, 0.5);
+}
+
+@media only screen and (max-width: 1200px) {
+  input{
+    width: 70vw;
+	height: 60px;
+	font-size: 20px;
+  }
+}
+
+.messageBox{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	margin-bottom: 5%;
+}
+
+
+#chatLog{
+	font-size: 80px;
+	color: white;
+	margin-bottom: 20%;
+}
+
+@media only screen and (max-width: 1200px) {
+  #chatLog {
+    font-size: 50px;
+  }
+}
+
+@keyframes flicker{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+
+#chatLog a:nth-child(1){
+	animation: flicker 1s linear infinite;
+	animation-delay: 0.5s;
+	text-shadow: 1px 1px 2px black, 0 0 0.1em white, 0 0 0.2em white;
+}
+#chatLog a:nth-child(2){
+	animation: flicker 1s linear infinite;
+	animation-delay: 0.3s;
+	text-shadow: 1px 1px 2px black, 0 0 0.1em white, 0 0 0.2em white;
+}
+#chatLog a:nth-child(4){
+	animation: flicker 1s linear infinite;
+	animation-delay: 2s;
+	text-shadow: 1px 1px 2px black, 0 0 0.1em white, 0 0 0.2em white;
+}
+#chatLog a:nth-child(5){
+	animation: flicker 1s linear infinite;
+	animation-delay: 2.5s;
+	text-shadow: 1px 1px 2px black, 0 0 0.1em white, 0 0 0.2em white;
+}
+
+
+#chatRez{
+	padding: 3%;
+	width: 280px;
+	height: 240px;
+	font-size: 23px;
+	color: white;
+	overflow-y: scroll;
+	/*border-bottom: 1px solid white;
+	border-top: 1px solid white;*/
+	border-bottom: 1px solid white;
+	border-top: 1px solid white;
+	border-radius: 20px;
+	background-image: url('img/screen.jpg');
+	background-size: cover;
+	background-position: center;
+	box-shadow: 20px 20px 20px 5px rgba(0, 0, 0, 0.4), 0 3px 35px 5px rgba(30, 130, 76, 1);
+}
+
+.screen{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+@media only screen and (max-width: 1200px) {
+  .screen{
+    margin-top: 20%;
+
+  }
+}
+
+#chatRez::-webkit-scrollbar{
+ 	display: none;
+}
+
+#name{
+	width: 15vw;
+	height: 3vw;
+	font-size: 20px;
+	outline: none;
+	cursor: text;
+	padding: 3%;
+	border-left: none;
+	border-right: none;
+	border-top: 2px solid white;
+	border-bottom: 2px solid white;
+	color: white;
+	background-color: transparent;
+	border-radius: 5px;
+}
+
+@media only screen and (max-width: 1200px) {
+  #name {
+    font-size: 20px;
+    width: 25vw;
+	height: 4vw;
+  }
+}
+
+#question{
+	font-size: 20px;
+	color: white;
+	font-family: Copperplate,Copperplate Gothic Light,fantasy; 
+	text-align: center;
+}
+
+@media only screen and (max-width: 1200px) {
+  #question {
+    font-size: 15px;
+  }
+}
+
+#message{
+	font-size: 20px;
+	color: white;
+	font-family: Copperplate,Copperplate Gothic Light,fantasy; 
+	text-align: center;
+	text-shadow: 1px 1px 5px white, 0 0 1em white, 0 0 0.1em white;
+	animation: effect 2s linear infinite;
+}
+
+@keyframes effect{
+	0%{
+		opacity: 0.5;
+	}
+	50%{
+		opacity: 1;
+	}
+	100%{
+		opacity: 0.5;
+		text-shadow: 1px 1px 2px black, 0 0 0.1em white, 0 0 0.2em white;
+	}
+}
+
+
+
+#message:after{
+	content: ' \21D3'
+}
+
+.nameBox{
+	position: absolute;
+	width: 25vw;
+	top: 10%;
+	left: 5%;
+}
+
+@media only screen and (max-width: 1200px) {
+ .nameBox {
+ 	top: 3%;
+    width: 100vw;
+  }
+}
+
+button{
+	border: 1px solid white;
+	background-color: black;
+	border-radius: 40px;
+	width: 40px;
+	height: 40px;
+	margin-right: 3%;
+	color: white;
+	outline: none;
+	cursor: pointer;
+}
+
+button:hover{
+	background-color: white;
+	color: black;
+	transition-duration: 1s;
+}

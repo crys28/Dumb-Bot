@@ -1,0 +1,34 @@
+<html>
+    <head>
+
+        <title>Dumb-Bot</title>
+        <link rel="icon" type="image/png" href="img/bot.png">
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+    </head>
+    <body>
+        <div class="chat">
+
+            <div class="screen">
+        <p id="chatLog"><a>-</a> <a>-</a> <a>C H A T</a> <a>-</a> <a>-</a><br>
+        <a style="font-size: 20px;text-align: right;color: white;float: right;"><i>Made by Crys28</i></a></p>
+        <p id="chatRez"></p>
+            </div>
+
+            <div class="nameBox">
+                <a id="question">What is your name ?</a>
+                <br><br>
+            <input id="name" type="text">&nbsp;&nbsp;&nbsp;<button onclick="Welcome()">OK</button>
+            </div>
+
+            <div class="messageBox">
+        <a id="message">WRITE YOUR MESSAGE HERE : </a>
+                <br><br>
+             <input id="userBox" type="text" onkeydown="if (event.keyCode == 13) {talk()}">
+        </div>
+    </div>
+
+        <script type="text/javascript" src="script.js"></script>
+    </body>
+</html>
